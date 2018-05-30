@@ -2,6 +2,7 @@ FROM php:5.6-fpm
 
 # 更改配置文件
 ADD configFiles/www.conf /usr/local/etc/php-fpm.d/www.conf
+ADD configFiles/zz-docker.conf /usr/local/etc/php-fpm.d/zz-docker.conf
 
 # 安装扩展
 RUN docker-php-ext-enable opcache \
